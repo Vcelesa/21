@@ -1,0 +1,166 @@
+1	Bùi Tuấn Mạnh	A12K28	Chuyên môn Nam	
+Hoàng Kim Huyền (A11K28)
+Bùi Hương Giang (A9K28)
+
+2	Nguyễn Sa Huỳnh	A6K28	Chuyên môn Nam	
+1. Nguyễn Ngọc Quỳnh Anh (A14K29)
+2. Đỗ Vũ Anh Thư (A6K28)
+3	Nguyễn Tiến Long	A13K28	Chuyên môn Nam	
+
+1. Nguyễn Trần Trà Giang (A9K29)
+
+
+2. Hà Thảo Chi (A8K28)
+
+4	Tạ Hoàng Tuấn Hưng	A6K28	Chuyên môn Nam	
+1. Nguyễn Hồng Trang (A13K29)
+
+
+2. Hoàng Ngọc Huyền (A14K28)
+
+5	Phùng Ngô Chính Nghĩa	A6K29	Chuyên môn Nam	
+1. Hà Thị Trà My (A6K29)
+
+
+2. Hoàng Phương Thảo (A8K28)
+
+6	Đào Đức Long	A4K29	Chuyên môn Nam	
+1. Lại Tú Anh (A14K29)
+
+
+2. Nguyễn Thị Minh Giang (A13K28)
+
+7	Đồng Nhật Tiến	A6K29	Chuyên môn Nam	
+1. Nguyễn Thị Hồng Hoa (A11K29)
+
+
+2. Lê Minh Phương (A4K28)
+
+8	Lưu Phạm Nhật Minh	A4K28	Chuyên môn Nam	
+1. Vũ Hồng Ngọc (A9K30)
+
+
+2. Lưu Hương Thảo (A7K30)
+
+9	Nguyễn Hoàng Xuân Phong	A3K29	Chuyên môn Nam	
+1. Nguyễn Thị Bảo Châu (A2K30)
+
+
+2. Dương Mai Uyên (A2K30)
+
+10	Nguyễn Hữu Tùng	A6K29	Chuyên môn Nam	
+1. Nguyễn Đặng Bảo Khánh (A14K29)
+
+
+2. Phan Hải Yến (A13K30)
+
+11	Phạm Văn Mạnh	A3K29	Chuyên môn Nam	
+1. Lê Hà Ngân (A9K30)
+
+
+2. Nguyễn Xuân Mai (A14K30)
+
+12	Ngô Bảo Châu	A5K30	Chuyên môn Nam	
+1. Nguyễn Trâm Anh (A10K30)
+
+
+2. Nguyễn Thùy Linh (A8K28)
+
+13	Hà Thái Sơn	A13K30	Chuyên môn Nam	
+1. Đỗ Thị Hoài Thanh (A11K29)
+
+
+2. Đường Huyền Trang (A10K30)
+
+14	Nguyễn Phú Toàn	A14K29	Chuyên môn Nam	
+1. Nguyễn Hà Vy (A10K30)
+
+
+2. Phùng Phương Anh (A11K30)
+
+15	Nguyễn Hồng Quân	Chưa cập nhật	Chuyên môn Nam	
+1. Lê Trần Bảo Anh (A11K30)
+
+
+2. Dương Quỳnh Anh (A8K28)
+
+16	Trần Thanh Hải	A3K30	Chuyên môn Nam	
+1. Nguyễn Thị Bảo Phương (A8K28)
+
+
+2. Trần Thanh Mai (A12K28)
+
+17	Nguyễn Văn An	A1K30	Chuyên môn Nam	
+1. Nguyễn Minh Thư (A8K29)
+
+
+2. Nguyễn Bảo An (A5K29)
+
+18	Hoàng Khôi Vĩ	A10K29	Chuyên môn Nam	
+1. Hoàng Thu Ngân (A14K28)
+
+
+2. Nguyễn Thị Mỹ Hà (A9K29)
+
+19	Doãn Tuệ Minh	A13K30	Chuyên môn Nam	
+1. Nguyễn Thị Diệu Linh (A9K29)
+
+
+2. Nguyễn Ngân Khánh (Chưa cập nhật)
+
+20	Nguyễn Việt Anh	A4K30	Chuyên môn Nam	
+1. Tạ Minh Ánh (Chưa cập nhật)
+
+
+2. Đặng Khánh Huyền (A6K29)
+
+21	Phạm Hải Quân	A3K30	Chuyên môn Nam	
+1. Trần Khánh Ly (A6K30)
+
+
+2. Lương Phương Thanh (A14K29)
+
+22	Triệu Đức Khánh	A11K29	Truyền thông	
+1. Hà Gia Linh (A14K29)
+
+
+2. Quảng Thị Kim Khuyên (A11K29)
+
+23	Nguyễn Trường Thành	A11K28	Hậu cần	
+1. Phạm Thị Hân (Chưa cập nhật)
+
+
+2. Nguyễn Quỳnh Anh (A11K28)
+
+24	Nguyễn Hữu Anh Khoa	A11K28	Hậu cần	
+1. Nguyễn Lê Hà Trang (A11K28)
+
+
+2. Lê Thùy Dung (A7K29)
+
+25	Nguyễn Ngọc Bách	A12K30	Hậu cần	
+1. Trần Thu Trang (A7K29)
+
+
+2. Nguyễn Phương Bảo Yến (A11K30)
+
+
+3. Nguyễn Ngọc Khánh Thy (A11K30)
+
+26	Nguyễn Nhật Dương	A15K30	Hậu cần	
+1. Hoàng Thị Khánh Linh (A15K30)
+
+
+2. Nguyễn Hải Hà Phương (A7K30)
+
+
+3. Hoàng Minh Phương (A10K30)
+
+27	Phạm Đức Phương	Chưa cập nhật	Hậu cần	
+1. Nguyễn Hồng Diệp (A9K30)
+
+
+2. Nguyễn Thị Lan Anh (A5K30)
+
+
+3. Vũ Thị Hồng Nhung (A10K30)

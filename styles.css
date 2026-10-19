@@ -1,0 +1,440 @@
+/* --- Import Font chữ đẹp từ Google Fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Quicksand:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    height: 100dvh; /* Hỗ trợ chuẩn chiều cao trên Safari iOS & Chrome Mobile */
+    overflow: hidden; /* Khóa cố định màn hình, chống cuộn tràn */
+    font-family: 'Quicksand', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #feada6 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+}
+
+/* --- Khung chính --- */
+.main-container {
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 40px 30px;
+    max-width: 550px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(230, 80, 120, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.text-welcome h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.3rem;
+    color: #d63384;
+    margin-bottom: 12px;
+    line-height: 1.3;
+}
+
+.subtitle {
+    font-size: 0.95rem;
+    color: #6c757d;
+    margin-bottom: 28px;
+}
+
+/* --- Khung Nhập tên & Nút bấm --- */
+/* Khung tổng chứa ô nhập + nút submit */
+.getname {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+/* Khung định vị cho Input và danh sách gợi ý */
+.input-wrapper {
+    position: relative;
+    flex: 1; /* Chiếm toàn bộ không gian còn lại */
+}
+
+/* Ô nhập tên dạng Bo cong */
+#nameInput {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 15px;
+    border: 2px solid #ff3366;
+    border-radius: 25px;
+    outline: none;
+    box-sizing: border-box;
+    background: #fff;
+    transition: all 0.2s ease;
+}
+
+/* Nút Submit */
+#submitName {
+    padding: 12px 24px;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, #ff3366, #ff6b81);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    white-space: nowrap;
+    box-shadow: 0 4px 12px rgba(255, 51, 102, 0.3);
+}
+
+/* Danh sách gợi ý DÍNH LIỀN ngay dưới ô input */
+.suggest {
+    display: none; /* Mặc định ẩn */
+    position: absolute;
+    top: calc(100% + 6px); /* Nằm ngay sát phía dưới ô input */
+    left: 0;
+    width: 100%; /* Rộng vừa khít với ô input */
+    margin: 0;
+    padding: 6px 0;
+    list-style: none;
+    background: #ffffff;
+    border: 2px solid #ff3366;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(255, 51, 102, 0.2);
+    max-height: 220px;
+    overflow-y: auto;
+    z-index: 999; /* Đảm bảo nổi lên trên các thành phần khác */
+    box-sizing: border-box;
+}
+
+/* Tùy chỉnh danh sách gợi ý */
+.suggest li {
+    padding: 10px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    border-bottom: 1px solid #fff0f3;
+    transition: background 0.2s ease;
+}
+
+.suggest li:last-child {
+    border-bottom: none;
+}
+
+.suggest li:hover {
+    background-color: #ffe6eb;
+}
+
+.s-name {
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 14px;
+}
+
+.s-meta {
+    font-size: 12px;
+    font-weight: bold;
+    color: #ffffff;
+    background: #ff3366;
+    padding: 3px 10px;
+    border-radius: 12px;
+}
+
+#nameInput {
+    flex: 1;
+    min-width: 220px;
+    padding: 14px 20px;
+    font-size: 1rem;
+    font-family: inherit;
+    border: 2px solid #f8d7da;
+    border-radius: 30px;
+    outline: none;
+    transition: all 0.3s ease;
+    background: #fff;
+}
+
+#nameInput:focus {
+    border-color: #d63384;
+    box-shadow: 0 0 12px rgba(214, 51, 132, 0.2);
+}
+
+#submitName {
+    padding: 14px 28px;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: inherit;
+    color: #fff;
+    background: linear-gradient(45deg, #d63384, #ff6b81);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 15px rgba(214, 51, 132, 0.3);
+}
+
+#submitName:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(214, 51, 132, 0.4);
+}
+
+#submitName:active {
+    transform: translateY(0);
+}
+
+/* --- Màn hình phụ (Modal Popup) --- */
+.modal {
+    display: none; /* Mặc định ẩn */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(0, 0, 0, 0.55); */
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal.show {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-content {
+    background: #fff;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 480px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    position: relative;
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+    animation: popupAnimation 0.3s forwards ease-out;
+}
+
+@keyframes popupAnimation {
+    to {
+        transform: scale(1);
+    }
+}
+
+.close-btn {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #888;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    z-index: 10;
+}
+
+.close-btn:hover {
+    color: #d63384;
+}
+
+.modal-header {
+    background: #fff0f5;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #ffe4e1;
+}
+
+.modal-header h2 {
+    font-family: 'Dancing Script', cursive;
+    color: #d63384;
+    font-size: 2rem;
+}
+
+.modal-body {
+    padding: 24px;
+    text-align: center;
+}
+
+/* --- Khung chứa ảnh --- */
+.image-wrapper {
+    width: 100%;
+    max-height: 350px; /* Giới hạn chiều cao tối đa */
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    background-color: #fff0f3; /* Phông nền nhạt lấp khoảng trống thừa */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#cardImage {
+    max-width: 100%;
+    max-height: 350px;
+    width: auto;
+    height: auto;
+    object-fit: contain; /* Giữ nguyên toàn bộ hình ảnh */
+    border-radius: 8px;
+}
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.greeting-text h3 {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.highlight-name {
+    color: #d63384;
+    font-weight: 700;
+}
+
+.greeting-text p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.modal-footer {
+    padding: 10px 24px 24px;
+    text-align: center;
+}
+
+.btn-close-modal {
+    padding: 10px 30px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    font-family: inherit;
+    color: #555;
+    background: #e9ecef;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.btn-close-modal:hover {
+    background: #dee2e6;
+}
+
+/* Màn hình Loading tràn màn hình */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(135deg, #ffe6eb 0%, #fff0f3 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+/* Lớp ẩn màn hình loading khi tải xong */
+.loading-screen.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader-content {
+    text-align: center;
+    color: #ff3366;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.loader-content h2 {
+    font-size: 18px;
+    margin: 10px 0;
+    font-weight: 600;
+}
+
+/* Biểu tượng xoay tròn */
+.spinner {
+    font-size: 50px;
+    display: inline-block;
+    animation: spin 1.5s infinite linear;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg) scale(1); }
+    50% { transform: rotate(180deg) scale(1.2); }
+    100% { transform: rotate(360deg) scale(1); }
+}
+
+/* Thanh phần trăm tiến trình */
+.progress-bar {
+    width: 260px;
+    height: 12px;
+    background-color: #ffd1dc;
+    border-radius: 10px;
+    margin: 15px auto 8px auto;
+    overflow: hidden;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.progress-fill {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #ff3366, #ff6b81);
+    transition: width 0.2s ease;
+    border-radius: 10px;
+}
+
+.progress-text {
+    font-weight: bold;
+    font-size: 14px;
+    color: #ff3366;
+}
+/* --- Tối ưu cho màn hình chiều rộng nhỏ (< 380px) --- */
+@media (max-width: 380px) {
+    .getname {
+        flex-direction: column; /* Chuyển từ hàng ngang sang hàng dọc */
+        gap: 12px;
+    }
+
+    .input-wrapper {
+        width: 100%;
+    }
+
+    #submitName {
+        width: 100%; /* Nút Submit rộng full chiều ngang */
+        justify-content: center;
+    }
+}
+
+/* Dòng thông báo lỗi phía trên ô nhập */
+.error-message {
+    color: #ff3366;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    min-height: 18px; /* Giữ cố định chiều cao để không bị giật khung khi hiện chữ */
+    display: none;
+    text-align: center;
+    animation: fadeInError 0.2s ease-in-out;
+}
+
+@keyframes fadeInError {
+    from {
+        opacity: 0;
+        transform: translateY(-4px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

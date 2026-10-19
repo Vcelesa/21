@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chúc Mừng 20/10 - CVC</title>
+    <!-- Nhúng file CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Màn hình chờ (Loading Screen) -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loader-content">
+            <div class="spinner">🌸</div>
+            <h2>Đang chuẩn bị quà mừng 20/10...</h2>
+            <div class="progress-bar">
+                <div id="progressFill" class="progress-fill"></div>
+            </div>
+            <span id="progressText" class="progress-text">0%</span>
+        </div>
+    </div>
+
+    <!-- Khung giao diện chính -->
+    <div class="main-container">
+        <div class="text-welcome">
+            <h1>Chúc Mừng Ngày 20/10 Của Các Bạn Nữ CVC!!! 🎉🌸</h1>
+            <p class="subtitle">Nhập tên của bạn để nhận phần quà chúc mừng đặc biệt nhé!</p>
+        </div>
+
+        <p id="errorMessage" class="error-message"></p>
+
+        <div class="getname">
+        <!-- Khung bọc riêng cho Input và Suggestion -->
+        <div class="input-wrapper">
+            <input type="text" id="nameInput" placeholder="Nhập tên của bạn..." autocomplete="off">
+            <ul id="suggest" class="suggest">
+                <li data-index="0">
+                </li>
+            </ul>
+        </div>
+        
+        <button id="submitName">Submit ✨</button>
+    </div>
+
+    <!-- Màn hình phụ (Modal Popup hiển thị khi bấm Submit) -->
+    <div id="popupModal" class="modal">
+        <div class="modal-content">
+            <!-- Nút đóng (X) -->
+            <span class="close-btn" id="closeBtn">&times;</span>
+            
+            <div class="modal-header">
+                <h2>💐 Thư Chúc Mừng 20/10 💐</h2>
+            </div>
+            
+            <div class="modal-body">
+                <!-- Khung hiển thị ảnh chúc mừng -->
+                <div class="image-wrapper">
+                    <!-- Bạn có thể thay link ảnh bên dưới bằng link ảnh khác hoặc đường dẫn ảnh cục bộ (vd: images/flower.jpg) -->
+                    <img id="cardImage" src="" alt="Hoa chúc mừng 20/10">
+                </div>
+                
+                <!-- Nội dung lời chúc -->
+                <div class="greeting-text">
+                    <h3>Gửi bạn: <span id="displayName" class="highlight-name"></span> 💕</h3>
+                    <p id="wishText">
+                        Chúc bạn luôn xinh đẹp, rạng rỡ, tràn ngập hạnh phúc và đạt được nhiều thành công trong công việc cũng như cuộc sống! Cảm ơn bạn vì đã luôn là một phần tuyệt vời của gia đình CVC! 🌸✨
+                    </p>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button id="modalCloseBtn" class="btn-close-modal">Đóng</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Nhúng file JavaScript -->
+    <script src="scripts.js"></script>
+</body>
+</html>
