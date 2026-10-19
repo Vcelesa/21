@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const cardImage = document.getElementById("cardImage");
     const wishText = document.getElementById("wishText");
 
-    const TOTAL_IMAGES = 28;
+    const TOTAL_IMAGES = 29;
     // Tổng số tài nguyên cần theo dõi = 28 ảnh + 1 file json + 1 file txt = 30
     const TOTAL_RESOURCES = TOTAL_IMAGES + 2; 
     let loadedCount = 0;
